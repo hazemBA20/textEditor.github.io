@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link
+  href="https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans"
+  rel="stylesheet"
+   />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text editor</title>
+</head>
+<body>
+  <h1><strong> Text editor</strong></h1>
+  <h3>Hey there! you can tweak the parameters below and see how it affects the text sample!</h3>
+  <h4><strong>text sample:</strong></h4>
+  <p id="sample" style="font-family: Arial ;">Hello , world ! </p>
+  
+  <div class="preference"></div>
+  <div class="preference">
+    <label for="color"><strong>color   </strong></label>
+    <input type="color" name="color" id="color" />
+  </div>
+  <div class="preference">
+    <label for="size"><strong>size    </strong></label>
+    <input type="number" name="size" id="size" />
+  </div>
+  <div class="preference">
+   <label for="fonts"><strong>font   </strong>   </label>
+    <select name="fonts" id="fonts">
+<option value="">----select a font</option>
+<option value="Arial, sans-serif">Arial</option>
+<option value="Times New Roman, serif">Times New Roman</option>
+<option value="Courier New, monospace">Courier New</option>
+<option value="Georgia, serif">Georgia</option>
+<option value="Verdana, sans-serif">Verdana</option>
+<option value="Helvetica, sans-serif">Helvetica</option>
+<option value="Arial Black, sans-serif">Arial Black</option>
+<option value="Tahoma, sans-serif">Tahoma</option>
+<option value="Palatino Linotype, Book Antiqua, Palatino, serif">Palatino Linotype</option>
+<option value="Impact, Charcoal, sans-serif">Impact</option>
+    </select>
+  </div>
+  <div class="preference"></div>
+  <button type="button" onclick="changeStyle()" id="execute">press to see changes</button>
+  <script>
+    function changeStyle(){
+      par=document.getElementById("sample");
+      size=document.getElementById("size").value;
+      color=document.getElementById("color").value;
+      char=document.getElementById("fonts").value;
+      par.style.fontSize = size + 'px'
+
+       par.style.fontFamily= char;
+       par.style.color=color
+      }
+  </script>
+ 
+  
+</body>
+</html>
